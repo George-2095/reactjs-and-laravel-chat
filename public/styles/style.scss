@@ -1,0 +1,97 @@
+* {
+    box-sizing: border-box;
+    word-break: break-word;
+}
+
+// Scrollbar start
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background-color: #0000ff;
+    border-radius: 5px;
+
+    &:hover {
+        background-color: #00008b;
+    }
+}
+
+// Scrollbar end
+
+#example,
+.authcontainer {
+    margin-top: 70px;
+}
+
+#example {
+    a {
+        text-decoration: none !important;
+
+        &:hover {
+            text-decoration: underline !important;
+        }
+    }
+
+    .chatlist {
+        height: 50vh;
+        overflow-y: auto;
+        margin-bottom: 5px;
+        padding-right: 5px;
+    }
+
+    .chatinput {
+        padding-top: 5px;
+        border-top: 3px solid #000;
+    }
+
+    .message {
+        display: block;
+        clear: both;
+
+        b {
+            color: #fff;
+        }
+
+        .sent {
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 40%;
+            background-color: #0000ff;
+            float: left;
+        }
+
+        .received {
+            margin-bottom: 5px;
+            padding: 5px;
+            border-radius: 5px;
+            width: 40%;
+            background-color: #008000;
+            float: right;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    #example {
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    #example {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
